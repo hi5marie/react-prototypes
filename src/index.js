@@ -5,3 +5,4 @@ ReactDOM.render(
     <h1 className="container">React Prototypes!</h1>,
     document.getElementById('root')
 );
+
