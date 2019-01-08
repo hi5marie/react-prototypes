@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Field from './field';
 
-
 class ContactForm extends Component{
      constructor(props){
          super(props);
@@ -13,44 +12,34 @@ class ContactForm extends Component{
                  phone: '',
                  email: ''
              }
-
          }
-
      }
-
      handleInputChange = (event) => {
-
          const {value, name} = event.target;
-
          const {form} = this.state;
 
          form[name] = value;
-
          this.setState({
              form: {...form}
          });
      }
-
      handleSubmit = (event) => {
          event.preventDefault();
-         console.log('handleSubmit called. Form Values are:', this.state.form);
+         console.log('HandleSubmit called. Form Values are:', this.state.form);
      }
-
-
     render(){
          const {firstName, lastName, phone, email} = this.state.form;
 
         return (
+
             <form onSubmit={this.handleSubmit}>
 
             <Field name="firstName" label="First Name" type="text" value={firstName} onChange={this.handleInputChange}/>
             <Field name="lastName" label="Last Name" type="text" value={lastName} onChange={this.handleInputChange}/>
-            <Field name="phone" label="First Name" type="text" value={firstName} onChange={this.handleInputChange}/>
-            <Field name="firstName" label="First Name" type="text" value={firstName} onChange={this.handleInputChange}/>
+            <Field name="phone" label="Phone" type="text" value={phone} onChange={this.handleInputChange}/>
+            <Field name="email" label="Email" type="text" value={email} onChange={this.handleInputChange}/>
 
-                <button>Add Contact</button>
-
-
+            <button>Add Contact</button>
 
             </form>
         )

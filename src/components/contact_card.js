@@ -36,6 +36,6 @@ export default props => {
         </div>
 
     )
-    //return <h1>Full Name: {props.firstName} {props.lastName}</h1>
+    // return <h1>Full Name: {props.firstName} {props.lastName}</h1>
 
 }

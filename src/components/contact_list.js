@@ -10,19 +10,14 @@ class ContactList extends Component {
             contacts: contactData
         }
     }
-
     render(){
-
         const list = this.state.contacts.map((item, index) => {
 
             return <ContactCard key={index} contact={item}/>
 
         });
-
         return <div>{list}</div>
-
     }
-
 }
 
 export default ContactList;

@@ -6,13 +6,17 @@ export default props => {
 
     return (
 
-        <div className="form-group">
+       <div className="form-group">
 
-            <label>{props.label}</label>
+           <label>{props.label}</label>
 
-            <input {props.label} className="form-control"/>
 
-        </div>
+           <input className="form-control">
+
+           </input>
+
+
+       </div>
 
     )
 
