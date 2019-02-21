@@ -8,29 +8,17 @@ export default props => {
     return  (
         <div className="card">
 
-            <div className="card col-12">
-
-                <div className="card-header">{lastName}</div>
-
-                <div className="card-block">
-
-                    <h4 className="card-title">{firstName + ' ' + lastName}</h4>
-
-                    <div className="card-text">
-
-                        <p>
-                            <b>Phone: </b>
-                            {phone}
-                        </p>
-                        <p>
-                            <b>Email:</b>
-                            {email}
-                        </p>
-
-                    </div>
-
+            <div className="card">
+                <div className="card-header">{lastName}
                 </div>
 
+                <div className="card-block">
+                    <h4 className="card-title">{firstName + ' ' + lastName}</h4>
+                    <div className="card-text">
+                        <p><b>Phone: </b>{phone}</p>
+                        <p><b>Email: </b>{email}</p>
+                    </div>
+                </div>
             </div>
 
         </div>

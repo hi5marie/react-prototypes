@@ -13,6 +13,9 @@ class ContactForm extends Component{
                  email: ''
              }
          }
+
+
+
      }
      handleInputChange = (event) => {
          const {value, name} = event.target;
@@ -25,7 +28,8 @@ class ContactForm extends Component{
      }
      handleSubmit = (event) => {
          event.preventDefault();
-         console.log('HandleSubmit called. Form Values are:', this.state.form);
+
+         console.log('HandleSubmit this state:', this.state.form);
      }
     render(){
          const {firstName, lastName, phone, email} = this.state.form;
