@@ -10,7 +10,11 @@ class ContactForm extends Component{
                 firstName: '',
                 lastName: '',
                 phone: '',
-                email: ''
+                email: '',
+                streetAddress: '',
+                city: '',
+                state: '',
+                zipCode: ''
             }
         }
     }
@@ -20,7 +24,11 @@ class ContactForm extends Component{
                 firstName: '',
                 lastName: '',
                 phone: '',
-                email: ''
+                email: '',
+                streetAddress: '',
+                city: '',
+                state: '',
+                zipCode: ''
             }
         });
 
@@ -43,7 +51,7 @@ class ContactForm extends Component{
         this.reset();
     }
     render(){
-        const {firstName, lastName, phone, email} = this.state.form;
+        const {firstName, lastName, phone, email, streetAddress, city, state, zipCode} = this.state.form;
 
         return (
              <form onSubmit={this.handleSubmit}>
@@ -51,6 +59,12 @@ class ContactForm extends Component{
                  <Field name="lastName" label="Last Name" type="text" value={lastName} onChange={this.handleInputChange}/>
                  <Field name="phone" label="Phone" type="text" value={phone} onChange={this.handleInputChange}/>
                  <Field name="email" label="Email" type="text" value={email} onChange={this.handleInputChange}/>
+                 <Field name="streetAddress" label="Street Address" type="text" value={streetAddress} onChange={this.handleInputChange}/>
+
+                 <Field name="city" label="City" type="text" value={city} onChange={this.handleInputChange}/>
+                 <Field name="state" label="State" type="text" value={state} onChange={this.handleInputChange}/>
+                 <Field name="zipCode" label="Zip Code" type="text" value={zipCode} onChange={this.handleInputChange}/>
+
 
                  <button>Add Contact</button>
 
