@@ -19,6 +19,7 @@ class ContactForm extends Component{
         }
     }
     reset = ()=>{
+        console.log('Clear form...');
         this.setState({
             form: {
                 firstName: '',
@@ -34,7 +35,7 @@ class ContactForm extends Component{
 
     }
     handleInputChange = (event) => {
-        const {value, name} = event.target;
+        const {name, value} = event.target;
         const {form} = this.state;
 
         form[name] = value;

@@ -19,7 +19,6 @@ export default props => {
                         <p><b>State: </b>{state}</p>
                         <p><b>Zip Code: </b>{zipCode}</p>
 
-
                     </div>
                 </div>
             </div>
